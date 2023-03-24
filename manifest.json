@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Save Inputs",
+  "version": "1.0",
+  "description": "Save text from input fields on websites.",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "next.svg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
